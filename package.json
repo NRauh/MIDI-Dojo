@@ -1,0 +1,7 @@
+{
+  "name": "midi-dojo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nate Rauh <nrauh@users.noreply.github.com>",
+  "license": "MIT"
+}
