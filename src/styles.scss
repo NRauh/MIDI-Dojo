@@ -1,0 +1,27 @@
+.keyboard {
+  background-color: slategrey;
+
+  h1 {
+    font-family: Impact, Helvetica, sans-serif;
+    padding: 0.5em;
+  }
+
+  .keys {
+    display: flex;
+    width: 100%;
+
+    .key {
+      border: none;
+      border-left: 1px solid lightgrey;
+      height: 250px;
+      flex-grow: 1;
+      background-color: whitesmoke;
+      color: black;
+
+      &--sharp {
+        background-color: black;
+        color: ivory;
+      }
+    }
+  }
+}
