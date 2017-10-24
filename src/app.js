@@ -1,11 +1,16 @@
 import * as Tone from 'tone';
 
+const synth = new Tone.Synth().toMaster();
+
 const keys = document.querySelectorAll('.keyboard .keys .key');
+keys.forEach(addNoteEvents);
 
-let synth = new Tone.Synth().toMaster();
-
-keys.forEach((el) => {
-  el.addEventListener('mousedown', (e) => {
-    synth.triggerAttackRelease(el.dataset.note, '8n');
+function addNoteEvents(element) {
+  element.addEventListener('mousedown', (e) => {
+    synth.triggerAttack(e.target.textContent);
   });
-});
+
+  element.addEventListener('mouseup', (e) => {
+    synth.triggerRelease();
+  });
+}
