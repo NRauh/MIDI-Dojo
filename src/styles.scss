@@ -1,9 +1,25 @@
 .keyboard {
   background-color: slategrey;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: Impact, Helvetica, sans-serif;
+  text-align: center;
 
-  h1 {
-    font-family: Impact, Helvetica, sans-serif;
-    padding: 0.5em;
+  .modifiers {
+    width: 100%;
+    display: flex;
+    padding: 1em;
+    letter-spacing: 0.125em;
+
+    .envelope {
+      width: 20%;
+
+      input[type="range"] {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+      }
+    }
   }
 
   .keys {
